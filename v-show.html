@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="estilos.css">
+      <title>V-Show</title>
+   </head>
+   <body>
+      <div id='app'>
+         <label for="condicional">Coloca 1</label>
+         <input type="number" v-model="datos" id="condicional">
+         <h1 v-show="datos == 1">Hello</h1>
+      </div>
+      <p>
+         V-Show se comporta similar a V-If con la diferencia que este aplica un display: none al objeto html cuando lo desaparece.
+      </p>
+      <a href="index.html" class="enlaces">Hello World</a>
+
+      <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+      <script>
+         const app = new Vue({
+            el: '#app',
+            data: {
+               datos: ""
+            }
+         });
+      </script>
+   </body>
+</html>
