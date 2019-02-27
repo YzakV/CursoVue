@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="estilos.css">
+      <title>V-If</title>
+   </head>
+   <body>
+      <div id="app">
+         <label for="condicional">Coloca 1 o 2</label>
+         <input type="number" v-model="datos" id="condicional">
+         <h1 v-if="datos == 1">El día esta muy nublado</h1>
+         <h1 v-else-if="datos == 2">El día esta muy lluvioso</h1>
+         <h1 v-else>El día esta muy soleado</h1>
+      </div>
+
+
+      
+      <a href="index.html" class="enlaces">Hello World</a>
+      <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+      <script>
+         const app = new Vue({
+            el: '#app',
+            data: {
+               datos: ""
+            }
+         });
+      </script>
+   </body>
+</html>
