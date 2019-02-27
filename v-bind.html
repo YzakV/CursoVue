@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="estilos.css">
+      <title>V Bind</title>
+   </head>
+   <body>
+      <div id='app'>
+         <label for="alineadoParrafos"><strong>Alinea el segundo parrafo con atributos css</strong></label>
+         <input id="alineadoParrafos" type="text" v-model="message">
+
+         <label for="colorParrafo"><strong>Indica un estilo para el segundo parrafo</strong></label>
+         <input id="colorParrafo" type="text" v-model="message1">
+
+         <div style="width: 500px;">
+            <p align="center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam neque, molestiae recusandae repudiandae perspiciatis consequatur eligendi quo in molestias deserunt labore illum commodi sint placeat natus alias maiores vel optio.</p>
+
+            <!-- Colocar solo dos puntos seria la form abreviada de escribir v-bind -->
+            <p v-bind:align="message" :style="message1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus soluta quibusdam quo ex, perferendis voluptate mollitia veritatis deserunt nulla aliquid repudiandae repellat consectetur quos libero. Minima qui quasi modi doloribus.</p>
+         </div>
+      </div>
+      <a href="index.html" class="enlaces">Hello World</a>
+
+      
+      <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+      <script>
+         const app = new Vue({
+            el: '#app',
+            data: {
+               message: '',
+               message1: '' //message es una variable
+            }
+         });
+      </script>
+   </body>
+</html>
