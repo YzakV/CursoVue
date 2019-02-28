@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="estilos.css">
+      <title>Computed</title>
+   </head>
+   <body>
+      <h1>Datos computados</h1>
+      <div id='app'>
+         <h2>Escribe tu edad:</h2>
+         <input type="number" v-model="edad" id="condicional">
+         <!-- <div>
+            {{rangoEdad}}
+         </div> -->
+         <div v-html="rangoEdad  "></div>
+         <h2>{{concatenar}}</h2>
+      </div>
+
+      <a href="index.html" class="enlaces">Hello World</a>
+
+      <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+      <script>
+         const app = new Vue({
+            el: '#app',
+            data: {
+               edad: '',
+               nombre: "Isaac",
+               apellidoP: "Martinez",
+               apellidoM: "Vega"
+            },
+            computed: {
+               rangoEdad: function(){
+                  return this. edad >= 18 ? "<h2>Eres MAYOR de edad</h2>" : "<h3>Eres menor de edad</h3>";
+               },
+               concatenar: function(){
+                  return this.nombre + " " + this.apellidoM;
+               }
+            }
+         });
+      </script>
+   </body>
+</html>
