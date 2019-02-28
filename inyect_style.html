@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+   </head>
+   <body>
+      <div id='app'>
+         <p :style="estilo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo impedit voluptatum corrupti laborum sapiente ea dolorem, doloremque numquam, beatae fugit molestiae, magni ipsam quasi illum. Officiis ex amet temporibus sint.</p>
+      </div>
+
+      <a href="index.html" class="enlaces">Hello World</a>
+
+      <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+      <script>
+         const app = new Vue({
+            el: '#',
+            data: {
+               datos: ''
+            },
+            computed: {
+               estilo:  function(){
+                  //"width: 300px; font-size: 20px; color: chocolate; text-align: justify;"
+                  return {
+                     width: "300px",
+                     fontSize: "20px",
+                     color: chocolate,
+                     textAlign: justify
+                  }
+               }
+            }
+         });
+      </script>
+   </body>
+</html>
